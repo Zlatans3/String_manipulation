@@ -7,32 +7,36 @@
     tools:context=".MainActivity">
 
     <EditText
+
+        android:autofillHints="name"
+        android:inputType="text"
         android:id="@+id/inputEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <TextView
+        android:id="@+id/resultTextView"
         android:layout_width="98dp"
         android:layout_height="38dp"
 
         android:text="Hello World!" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/lowerCaseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lower Case" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/upperCaseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Upper Case" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/reverseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reverse" />
+        android:text="reverse" />
 
 </LinearLayout>
