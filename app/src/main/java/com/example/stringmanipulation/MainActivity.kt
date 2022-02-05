@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //UPPERCASE
         binding.upperCaseButton.setOnClickListener {
             val text = binding.inputEditText.text.trim().toString()
             if (text.isEmpty()) {
@@ -23,5 +24,18 @@ class MainActivity : AppCompatActivity() {
             val result = text.uppercase()
             binding.resultTextView.text = result
         }
+
+        //LOWERCASE
+        binding.lowerCaseButton.setOnClickListener{
+            var text = binding.inputEditText.text.trim().toString()
+            if (text.isEmpty()){
+                binding.inputEditText.error = "No input"
+                return@setOnClickListener
+            }
+            var result = text.lowercase()
+            binding.resultTextView.text = result
+        }
+
+
     }
 }
