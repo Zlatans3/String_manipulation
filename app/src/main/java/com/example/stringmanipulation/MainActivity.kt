@@ -36,6 +36,15 @@ class MainActivity : AppCompatActivity() {
             binding.resultTextView.text = result
         }
 
-
+        //REVERSE
+        binding.reverseButton.setOnClickListener {
+            var text = binding.inputEditText.text.trim().toString()
+            if (text.isEmpty()){
+                binding.inputEditText.error = "No input"
+                return@setOnClickListener
+            }
+            var result = text.reversed()
+            binding.resultTextView.text = result
+        }
     }
 }
